@@ -54,7 +54,7 @@ def multi(_conv, _pretty = False): # takes any amount of characters
       newResult += str(result[i])
       if(i != len(result) - 1):
         newResult += ", "
-        return newResult # returns string; easier to read. will not print result
-      else:
-        return result # returns list. will not print result
+    return newResult # returns string; easier to read. will not print result
+  else:
+    return result # returns list. will not print result
 ```
