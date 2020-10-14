@@ -58,3 +58,7 @@ def multi(_conv, _pretty = False): # takes any amount of characters
   else:
     return result # returns list. will not print result
 ```
+
+###### For Future Releases
+ - [ ] Make PyPA Package
+ - [ ] Add function to print and assign variable
