@@ -8,13 +8,14 @@ Now you can use `cti.single()` or `cti.multi()` to convert each
 
 `cti.single()` takes a string of one character; if given more it will give 0, and if given less it will give you an error. It will return an integer
 
-`cti.multi()` takes a string of any amount. It will return a list (array)
+`cti.multi()` takes a string of any amount and a boolean. It will return a list (array) if the boolean is `False`, and a more readable string if ` True`
 
 Neither function takes more than one argument, so any mutilation of the string will have to be done manually.
 
 Note that any characters given for either function that isn't part of the alphabet (or space) will return for 0 (for single) or a blank list (for multi).
 For multi, if one such character is mixed in with other characters that do work, these characters will simply not appear, whilst the others (that do work) will.
 
+##### Source Code
 
 ``` py
 letters = [
@@ -34,18 +35,26 @@ def single(_conv): # takes single character. will return 0 if given more
           result = 32
     return result # returns int. will not print result
 
-def multi(_conv): # takes any amount of characters
-    result = []
-    for a in range(len(_conv)):
-        for i in range(len(letters)):
-            if (str(_conv[a]) == letters[i]):
-                if (i >= 26):
-                    if (i < 52):
-                        result.append(i + 71)
-                    else:
-                        result.append(32)
-                else:
-                    result.append(i + 65)
-
-    return result # returns list. will not print result
+def multi(_conv, _pretty): # takes any amount of characters
+  result = []
+  for a in range(len(_conv)):
+    for i in range(len(letters)):
+      if (str(_conv[a]) == letters[i]):
+        if (i >= 26):
+          if (i < 52):
+            result.append(i + 71)
+          else:
+            result.append(32)
+        else:
+          result.append(i + 65)
+        
+  if(bool(_pretty) == True):
+    newResult = ""
+    for i in range(len(result)):
+      newResult += str(result[i])
+      if(i != len(result) - 1):
+        newResult += ", "
+        return newResult # returns string; easier to read. will not print result
+      else:
+        return result # returns list. will not print result
 ```
