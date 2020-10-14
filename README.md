@@ -35,7 +35,7 @@ def single(_conv): # takes single character. will return 0 if given more
           result = 32
     return result # returns int. will not print result
 
-def multi(_conv, _pretty): # takes any amount of characters
+def multi(_conv, _pretty = False): # takes any amount of characters
   result = []
   for a in range(len(_conv)):
     for i in range(len(letters)):
