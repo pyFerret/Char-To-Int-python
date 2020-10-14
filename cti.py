@@ -34,3 +34,26 @@ def multi(_conv, _pretty = False): # takes any amount of characters
     return newResult # returns string. will not print result
   else:
     return result # returns list. will not print result
+
+def prtMulti(_conv):
+  result = []
+  for a in range(len(_conv)):
+    for i in range(len(letters)):
+      if (str(_conv[a]) == letters[i]):
+        if (i >= 26):
+          if (i < 52):
+            result.append(i + 71)
+          else:
+            result.append(32)
+        else:
+          result.append(i + 65)
+
+  strResult = ""
+  for i in range(len(result)):
+    strResult += str(result[i])
+    if(i != len(result) - 1):
+      strResult += ", "
+  
+  print(strResult)
+
+  return result
