@@ -1,6 +1,6 @@
 # Char To Int
 
-#### This python module can convert a single character or a string into the ASCII value of that character. This currently only works with the alphabet in caps and lowercase.
+#### This python module can convert a single character or a string into the ASCII value of that character.
 
 To use it, download the `cti.py` file, make sure it is in the same folder as the project you are working on and write `import cti`
 
