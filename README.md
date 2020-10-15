@@ -8,6 +8,8 @@ To use it, download the `cti.py` file, make sure it is in the same folder as the
 
 #### Functions
 
+`cti.example()` takes nothing; will show the basic functions you can do
+
 `cti.single()` takes a string of one character; if given more it will give 0, and if given less it will give you an error. It will return an integer
 
 `cti.multi()` takes a string of any amount and a boolean. It will return a list (array) if the boolean is `False`, and a more readable string if ` True`
