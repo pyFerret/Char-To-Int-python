@@ -24,6 +24,8 @@ For multi, if one such character is mixed in with other characters that do work,
 ---
 
 ##### For Future Releases
- - [ ] Make PyPA Package
  - [X] Add function to print and assign variable
  - [X] Fix problem with data amount being limited
+ - [ ] Add more data
+ - [ ] Make a ascii value to binary converter
+    - [ ] Make a way to convert the characters straight to binary
