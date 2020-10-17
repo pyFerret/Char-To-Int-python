@@ -52,3 +52,29 @@ def example():
   multi("This must be printed!", False), '\n')
   print('cti.prtMulti("This does not need to be printed!")')
   prtMulti("This does not need to be printed!")
+
+def bin(_conv):
+  valInt = []; valBin = []
+  for a in range(len(_conv)):
+    for i in range(len(data)):
+      if(str(_conv[a]) == data[i][0]):
+        valInt.append(data[i][1])
+  for i in range(len(valInt)):
+    valBin.append("")
+    if(valInt[i] < 128): valBin[i] += "0"
+    else: valBin[i] += "1"; valInt[i] -= 128
+    if(valInt[i] < 64): valBin[i] += "0"
+    else: valBin[i] += "1"; valInt[i] -= 64
+    if(valInt[i] < 32): valBin[i] += "0"
+    else: valBin[i] += "1"; valInt[i] -= 32
+    if(valInt[i] < 16): valBin[i] += "0"
+    else: valBin[i] += "1"; valInt[i] -= 16
+    if(valInt[i] < 8): valBin[i] += "0"
+    else: valBin[i] += "1"; valInt[i] -= 8
+    if(valInt[i] < 4): valBin[i] += "0"
+    else: valBin[i] += "1"; valInt[i] -= 4
+    if(valInt[i] < 2): valBin[i] += "0"
+    else: valBin[i] += "1"; valInt[i] -= 2
+    if(valInt[i] < 1): valBin[i] += "0"
+    else: valBin[i] += "1"; valInt[i] -= 1
+  return valBin
