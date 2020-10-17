@@ -52,6 +52,7 @@ def example():
   multi("This must be printed!", False), '\n')
   print('cti.prtMulti("This does not need to be printed!")')
   prtMulti("This does not need to be printed!")
+  print('\n cti.bin("Print This!") \n', bin("Print This!"))
 
 def bin(_conv):
   valInt = []; valBin = []
